@@ -15,21 +15,13 @@
 const { useState } = React;
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// 【替换区 1】菜单配置
+// 【替换区 1】菜单配置 — 按实际页面数量填写，不要多余的占位项
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 const MENU = [
   {
-    group: '分组一',
+    group: '管理',
     items: [
-      { key: 'page1', label: '菜单项一', icon: '▦' },
-      { key: 'page2', label: '菜单项二', icon: '◈', active: true },
-    ]
-  },
-  {
-    group: '分组二',
-    items: [
-      { key: 'page3', label: '菜单项三', icon: '≡' },
-      { key: 'page4', label: '菜单项四', icon: '⚙' },
+      { key: 'list', label: '列表页', icon: '◈', active: true },
     ]
   },
 ];
@@ -131,7 +123,7 @@ function Sidebar({ activeKey, onSelect }) {
       <div className="flex items-center gap-2.5 px-4 py-4 border-b border-zinc-800">
         <div className="w-7 h-7 bg-blue-500 rounded-md flex items-center justify-center text-white text-sm font-bold">◈</div>
         {/* 【替换】系统名称 */}
-        <span className="text-white text-sm font-semibold">系统名称</span>
+        <span className="text-white text-sm font-semibold">【系统名称】</span>
       </div>
       <nav className="flex-1 py-3 overflow-y-auto">
         {MENU.map(({ group, items }) => (
